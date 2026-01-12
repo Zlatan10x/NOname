@@ -15,4 +15,4 @@ The application guides the user through three steps:
 ## How to Run Locally
 ```bash
 pip install nicegui
-python app.py
+python frontendnicegui.py
