@@ -1,0 +1,143 @@
+/* ============================= */
+/* THEME CUSTOMIZATION SECTION  */
+/* ============================= */
+
+:root {
+    --primary-pink: #ff4d88;
+    --light-pink: #ff99cc;
+    --bg-gradient-1: #ffccd5;
+    --bg-gradient-2: #ffc2d1;
+    --button-radius: 30px;
+    --font-main: 'Poppins', sans-serif;
+}
+
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-gradient-1), var(--bg-gradient-2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main-container {
+    text-align: center;
+    z-index: 2;
+}
+
+.proposal-image {
+    width: 300px;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-pink);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--primary-pink);
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    padding: 15px 40px;
+    border: none;
+    border-radius: var(--button-radius);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.yes-btn {
+    background-color: var(--primary-pink);
+    color: white;
+}
+
+.yes-btn:hover {
+    background-color: #ff1a66;
+    transform: scale(1.1);
+}
+
+.no-btn {
+    background-color: #ffffff;
+    color: var(--primary-pink);
+    position: absolute;
+}
+
+/* Floating Hearts */
+
+.hearts-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--light-pink);
+    transform: rotate(45deg);
+    animation: float 6s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--light-pink);
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: -10px;
+    top: 0;
+}
+
+@keyframes float {
+    0% {
+        bottom: -10%;
+        opacity: 1;
+        transform: translateX(0) rotate(45deg);
+    }
+    100% {
+        bottom: 110%;
+        opacity: 0;
+        transform: translateX(100px) rotate(45deg);
+    }
+}
+
+/* Success Page */
+
+.success-page {
+    background: linear-gradient(135deg, #ff99cc, #fffcfd);
+}
